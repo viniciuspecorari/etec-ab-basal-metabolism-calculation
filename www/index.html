@@ -24,62 +24,72 @@
 <body>
   <title>Preciso de um nome</title>
 
+<!---Imagem--->
   <div class="container row">
-    <div class="row">
+    <div class="row" style="margin-top:5%;">
       <div class="div col-xs-12">
       <center>
-        <h1>Cálculo<p>de</p>Metabolismo Basal</h1>
+        <img src="tmb.png">
       </center>
       </div>
-    </div>
+   </div>
 
-  <div class="row" style="margin-left:3%;">
+<!---Legenda
+   <div class="row">
+      <div class="col-xs-12">
+        <center>
+        <h1>Taxa Metabólica Basal</h1>
+        </center>
+      </div>
+   </div>
+--->
+<center>
+<nav>
+  <div class="row" style="margin-right:0%; margin-top:10%;">
 
     <!---Idade--->
-    <div class="col-xs-12">
-    <span>Idade:</span>
-    <input type="text"class="form-control" id="idade" readonly style="width:70%;"/>
+     <div class="row linha" style="margin-left:0%; margin-top:10%;">
+       <div class="col-xs-12">
+        <input type="text"class="form-control display" id="idade" placeholder="Idade">
+       </div>
     </div>
 
     <!---Altura--->
-    <div class="row linha" style="margin-left:0%;">
+    <div class="row linha" style="margin-left:0%; margin-top:5%;">
         <div class="col-xs-12">
-        <span>Altura:</span>
-        <input type="text"class="form-control" id="altura" readonly style="width:70%;"/>
+        <input type="text"class="form-control display" id="altura" placeholder="Altura em Centimetros"/>
         </div>
     </div>
 
     <!---Peso--->
-    <div class="row linha" style="margin-left:0%;">
+    <div class="row linha" style="margin-left:0%;margin-top:5%;" >
         <div class="col-xs-12">
-        <span>Peso:</span>
-        <input type="text"class="form-control" id="peso" readonly style="width:70%;"/>
+        <input type="text"class="form-control display" id="peso" placeholder="Peso em KG"/>
         </div>
     </div>
 
     <!---Sexo--->
-    <div class="row linha" style="margin-left:0%; margin-top">
-        <div class="col-xs-6">
-        <span>Sexo:</span>
-        <select class="form-control" id="Sexo">
-          <option>Escolha aqui</option>
-          <option>Masculino</option>
-          <option>Feminino</option>
+    <div class="row linha" style="margin-left:10%; margin-top:5%;">
+        <div class="col-xs-6" style="width:70%;">
+        <select class="form-control" id="Sexo" >
+          <option>Sexo</option>
+          <option value="masculino">Masculino</option>
+          <option value="feminino">Feminino</option>
         </select>
         </div>
     </div>
+ 
 
     <!---Botão--->
-    <center>
+
     <div cass="row linha" style="margin-top:5%;">
       <div class="col-xs-12">
-        <button type="button" class="button btn-primary btn-block" id="calculo">Calcular</button>
+        <button type="button" class="button btn-success btn-block" id="calculo">Calcular</button>
       </div>
     </div>
-    </center>
 
   </div>
-
-  
+</nav>
+</center>
 </body>
 </html>
