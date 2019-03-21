@@ -1,0 +1,28 @@
+/* This is a CSS file */
+
+body{
+  background-color: rgba(9, 224, 146);
+}
+
+nav{
+  background-color:rgba(50, 54, 66);
+}
+
+h2{
+  font-size:20px;
+  margin-right:10%; 
+}
+
+#sedentario{
+  height: 30px;
+  margin-top:25%;
+  margin-left: 60%;
+  width: 60%;
+}
+
+#leveAtivo{
+  height: 30px;
+  margin-top:25%;
+  margin-left: 60%;
+  width: 60%;
+}
