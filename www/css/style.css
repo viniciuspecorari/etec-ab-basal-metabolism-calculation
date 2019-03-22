@@ -13,10 +13,19 @@ body{
 }
 img{
   width: 150px;
+  
 }
 h1{
-  font-size: 20px;
-  margin-left:10%; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size:20px;
+  border: 1px solid rgba(50, 54, 66);
+  border-radius: 2px;
+  width: 80%;
+  background-color: rgba(50, 54, 66);
+  color:white;
+  box-shadow: 5px 5px rgba(50, 54, 66,0.7);
+  height: 40px;
+  padding-top: 1%;
 }
 #idade{
   color: blue;
@@ -53,6 +62,8 @@ nav{
   width:90%;
   height: 400px;
   background-color:rgba(50, 54, 66) ;
+   box-shadow: 5px 5px rgba(50, 54, 66,0.7);
+   margin-top: -5%;
 }
 a:link 
 { 
