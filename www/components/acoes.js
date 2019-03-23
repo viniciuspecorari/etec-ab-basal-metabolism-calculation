@@ -1,5 +1,4 @@
 
-
 // //botão continuar primeira tela
 // $(document).on('click', '#continuar', function(){
 
