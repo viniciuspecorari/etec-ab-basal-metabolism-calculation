@@ -20,6 +20,33 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="components/loader.css">
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Funções feitas em javScript -->
+  <script>
+  var id, alt, pes, sex, ativiFisica;
+
+  // Pegando o valor do campo idade
+  id=document.getElementById("idade").value;
+
+  // pegando o valor do campo altura
+  alt=document.getElementById("altura").value;
+  
+  // pegando o valor do campo peso
+  pes=document.getElementById("peso").value;
+
+    // pegando e verificando as opções de sexo
+    sex=document.getElementById("opcao").value;
+    if(opcao=="masculino"){
+      sex="masculino";
+    }else{
+      sex="feminino";
+    }
+
+    // verificando as opções de atividade fisica
+    
+
+
+</script>
 </head>
 <body>
   <title>Preciso de um nome</title>
@@ -73,8 +100,8 @@
         <div class="col-xs-6" style="width:70%;">
         <select class="form-control" id="Sexo" >
           <option>Sexo</option>
-          <option value="masculino">Masculino</option>
-          <option value="feminino">Feminino</option>
+          <option id="opcao" value="masculino">Masculino</option>
+          <option id="opcao" value="feminino">Feminino</option>
         </select>
         </div>
     </div>
