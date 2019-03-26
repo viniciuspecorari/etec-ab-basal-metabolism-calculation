@@ -47,6 +47,8 @@
 
 <body onload="fecharRespostas()">
 
+  <p id="manda" style="color:red;"></p>
+
 <!---Imagem--->
   <div class="container row">
     <div class="row" style="margin-top:5%;">
@@ -96,9 +98,11 @@
         <div class="col-xs-6" style="width:70%;">
         <select class="form-control" id="Sexo" >
           <option>Sexo</option>
-          <option id="opcao" value="masculino">Masculino</option>
-          <option id="opcao" value="feminino">Feminino</option>
+          <option  value="masculino">Masculino</option>
+          <option  value="feminino">Feminino</option>
         </select>
+
+        
         </div>
     </div>
  
@@ -210,7 +214,7 @@
       </div>
 
       <div class="col-xs-6">
-        <p id="tmb"></p>
+        <p id="tmb" style="color:red;"></p>
       </div>
     </div>
 
@@ -233,12 +237,114 @@
   </div>
 
    <script>
-
+        
         // Abre a tela de respostas
         function abrirRespostas(){
             document.getElementById("resultado").style.top="500px";
             document.getElementById("resultado").style.top="0px";
+
+        
+            var id, alt,  pes, sex, atiFisica, conta;
+
+
+            id = document.getElementById("idade").value;
+            alt = document.getElementById("altura").value;
+            pes = document.getElementById("peso").value;
+            sex = document.getElementById("Sexo").value;
             
+
+            //verificando as opções selecionadas
+            if(document.getElementById("sedentario").checked==true){
+              atiFisica=1.2;
+              
+              //verificando o sexo e fazendo a conta
+              if(sex == "masculino"){
+              conta = atiFisica * 66 + ((13.7 * pes + ( 5 * alt) - (6.8 * id)));
+              
+              document.getElementById("tmb").innerHTML=conta;
+            }if(sex == "feminino"){
+              conta = atiFisica * (655 + ((9.6 * pes)) + (1.8 * alt) - (4.7 * id));
+              
+              document.getElementById("tmb").innerHTML=conta;
+            }
+          }
+          
+          //verificando a opção seleciona Levemente Ativo
+          if(document.getElementById("leveAtivo").checked==true){
+              atiFisica=1.375;
+              
+
+              //verificando o sexo e fazendo a conta
+              if(sex == "masculino"){
+              conta = atiFisica * 66 + ((13.7 * pes + ( 5 * alt) - (6.8 * id)));
+              
+              
+              document.getElementById("tmb").innerHTML=conta;
+
+            }else{
+              conta = atiFisica * (655 + ((9.6 * pes)) + (1.8 * alt) - (4.7 * id));
+              
+            
+              document.getElementById("tmb").innerHTML=conta;
+            }
+          }
+
+          //verificando a opção seleciona Moderadamente Ativo
+          if(document.getElementById("moderaAtivo").checked==true){
+              atiFisica=  1.55  ;
+
+              //verificando o sexo e fazendo a conta
+              if(sex == "masculino"){
+              conta = atiFisica * 66 + ((13.7 * pes + ( 5 * alt) - (6.8 * id)));
+              
+              
+              document.getElementById("tmb").innerHTML=conta;
+              
+            }else{
+              conta = atiFisica * (655 + ((9.6 * pes)) + (1.8 * alt) - (4.7 * id));
+              
+              
+              document.getElementById("tmb").innerHTML=conta;
+            }
+          }
+            
+           //verificando a opção selecionada Altamente Ativo
+          if(document.getElementById("altaAtivo").checked==true){
+              atiFisica= 1.725 ;
+
+              //verificando o sexo e fazendo a conta
+              if(sex == "masculino"){
+              conta = atiFisica * 66 + ((13.7 * pes + ( 5 * alt) - (6.8 * id)));
+              
+              
+              document.getElementById("tmb").innerHTML=conta;
+              
+            }else{
+              conta = atiFisica * (655 + ((9.6 * pes)) + (1.8 * alt) - (4.7 * id));
+              
+              
+              document.getElementById("tmb").innerHTML=conta;
+            }
+          }
+
+          //verificando a opção selecionada Altamente Ativo
+          if(document.getElementById("extreAtivo").checked==true){
+              atiFisica = 1.9 ;
+
+              //verificando o sexo e fazendo a conta
+              if(sex == "masculino"){
+              conta = atiFisica * 66 + ((13.7 * pes + ( 5 * alt) - (6.8 * id)));
+              
+              
+              document.getElementById("tmb").innerHTML=conta;
+              
+            }else{
+              conta = atiFisica * (655 + ((9.6 * pes)) + (1.8 * alt) - (4.7 * id));
+              
+              
+              document.getElementById("tmb").innerHTML=conta;
+            }
+          }
         }
         // Fecha a tela de respostas
         function fecharRespostas(){
@@ -247,22 +353,7 @@
 
         //Função de conta
 
-      function pegaDados(){
-        var id, alt,  pes, sex, atiFisica, conta;
 
-        id = document.getElementById("idade").value;
-        alt = document.getElementById("altura").value;
-        pes = document.getElementById("peso").value;
-        sex = document.getElementById("opcao").value;
-}
-        //verificando as opções selecionadas
-        if(document.getElementById("sedentario").checked==true){
-          atiFisica=1.2;
-          conta = 1.2 * 66 + ((13,7 * pes + ( 5 * alt) - (6,8 * id)));
-          
-          var teste = "dasgfstfgsw";
-          document.getElementById("tmb").innerHTML="iuediuwehiu";
-        }
     </script>
 
 </body>
