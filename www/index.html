@@ -22,8 +22,30 @@
   <link rel="stylesheet" href="css/style.css">
 
 </head>
-<body>
-  <title>Preciso de um nome</title>
+
+  <!-- Resultados -->
+
+  <!-- Funções da tela de resposta -->
+    <script>
+
+        // Abre a tela de respostas
+        function abrirRespostas(){
+            document.getElementById("resultado").style.top="500px";
+            document.getElementById("resultado").style.top="0px";
+            
+        }
+        // Fecha a tela de respostas
+        function fecharRespostas(){
+          document.getElementById("resultado").style.top="-100%";
+        }
+
+        //Função de conta
+
+
+        
+    </script>
+
+<body onload="fecharRespostas()">
 
 <!---Imagem--->
   <div class="container row">
@@ -45,7 +67,7 @@
    </div>
 
 <center>
-<nav>
+<section id="corpo1">
   <div class="row" style="margin-right:0%; margin-top:10%;">
 
     <!---Idade--->
@@ -90,11 +112,12 @@
     </div> -->
 
   </div>
-</nav>
+</section>
+
 <!-- ------------------------------------Segunda parte -------------------------------------->
 
     <!---Titulo--->
-    <div class="container row">
+
 
      <div class="row" style="margin-top:5%;">
         <div class="div col-xs-12">
@@ -107,11 +130,11 @@
 <!---Opções--->
   <div class="row" style="margin-top:10%;">
 <center>
-<nav id="nav2">
+<section id="corpo2">
     <!---Sedentarismo--->
     <div class="row linha">
       <div class="col-xs-3">
-       <input type="radio" class="form-control" name="seden" id="sedentario">
+       <input type="radio" class="form-control" name="ativi" id="sedentario">
       </div>
       <div class="col-xs-9">
         <h3>Sedentário (pouco ou nenhum exercício). </h3>
@@ -121,7 +144,7 @@
     <!---Levemente ativo--->
     <div class="row linha">
       <div class="col-xs-3">
-       <input type="radio" class="form-control" name="levAtivo" id="leveAtivo">
+       <input type="radio" class="form-control" name="ativi" id="leveAtivo">
       </div>
       <div class="col-xs-9">
         <h3>Levemente ativo (exercício leve 1 a 3 dias por semana). </h3>
@@ -131,7 +154,7 @@
     <!---Moderadamente ativo--->
     <div class="row linha">
       <div class="col-xs-3">
-       <input type="radio" class="form-control" name="modAtivo" id="moderaAtivo">
+       <input type="radio" class="form-control" name="ativi" id="moderaAtivo">
       </div>
       <div class="col-xs-9">
         <h3> Moderadamente ativo (exercício moderado, faz esportes 3 a 5 dias por semana). </h3>
@@ -141,7 +164,7 @@
     <!---Altamente ativo--->
     <div class="row linha">
       <div class="col-xs-3">
-       <input type="radio" class="form-control" name="altaAtivo" id="altaAtivo">
+       <input type="radio" class="form-control" name="ativi" id="altaAtivo">
       </div>
       <div class="col-xs-9">
         <h3>Altamente ativo (exercício pesado de 5 a 6 dias por semana). </h3>
@@ -151,7 +174,7 @@
    <!---Extremamente ativo--->
     <div class="row linha">
       <div class="col-xs-3">
-       <input type="radio" class="form-control" name="exAtivo" id="extreAtivo">
+       <input type="radio" class="form-control" name="ativi" id="extreAtivo">
       </div>
       <div class="col-xs-9">
         <h3>Extremamente ativo (exercício pesado diariamente e até 2 vezes por dia). </h3>
@@ -165,10 +188,8 @@
       <button type="button" class="button btn-success btn-block" id="calculo" onclick="abrirRespostas()">Calcular</button></center>
       </div>
     </div>
-    </nav>
+    </section>
   </div>
-
-  <!-- Resultados -->
 
   <section name:"result" id="resultado">
     <div class="row linha">
@@ -202,25 +223,47 @@
 
     <div class="row linha">
       <div class="col-xs-12">
-        <p id="texto">A Taxa de Metabolismo Basal é a quantidade minima de energia (calorias) necessaria para manter as funçõeses vitais do organismo em repouso </p>
+        <p id="texto">A Taxa de Metabolismo Basal é a quantidade minima de energia (calorias) necessaria para manter as funçõeses vitais do organismo em repouso. </p>
       </div>
     </div>
 
-<!-- Funções da tela de resposta -->
-    <script>
+  </section>
+
+</center>
+  </div>
+
+   <script>
 
         // Abre a tela de respostas
         function abrirRespostas(){
             document.getElementById("resultado").style.top="500px";
             document.getElementById("resultado").style.top="0px";
+            
         }
         // Fecha a tela de respostas
         function fecharRespostas(){
           document.getElementById("resultado").style.top="-100%";
         }
-    </script>
-  </section>
 
-</center>
+        //Função de conta
+
+      function pegaDados(){
+        var id, alt,  pes, sex, atiFisica, conta;
+
+        id = document.getElementById("idade").value;
+        alt = document.getElementById("altura").value;
+        pes = document.getElementById("peso").value;
+        sex = document.getElementById("opcao").value;
+}
+        //verificando as opções selecionadas
+        if(document.getElementById("sedentario").checked==true){
+          atiFisica=1.2;
+          conta = 1.2 * 66 + ((13,7 * pes + ( 5 * alt) - (6,8 * id)));
+          
+          var teste = "dasgfstfgsw";
+          document.getElementById("tmb").innerHTML="iuediuwehiu";
+        }
+    </script>
+
 </body>
 </html>
