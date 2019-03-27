@@ -196,7 +196,7 @@
   </div>
 
   <section name:"result" id="resultado">
-    <div class="row linha">
+    <div class="row linha" id="linha">
       <div class="col-xs-9">
     <p id="paragrafo">
       Resultado
@@ -208,13 +208,13 @@
   </div>
     </div>
 
-    <div class="row linha" id="linha">
+    <div class="row linha" style="margin-top:10%;">
       <div class="col-xs-6">
         <p id="legenda">TMB:</p>
       </div>
 
       <div class="col-xs-6">
-        <p id="tmb" style="color:red;"></p>
+        <p id="tmb" ></p>
       </div>
     </div>
 
@@ -226,7 +226,7 @@
     </div>
 
     <div class="row linha">
-      <div class="col-xs-12">
+      <div class="col-xs-11" style="margin-left:15px;">
         <p id="texto">A Taxa de Metabolismo Basal é a quantidade minima de energia (calorias) necessaria para manter as funçõeses vitais do organismo em repouso. </p>
       </div>
     </div>
@@ -259,11 +259,11 @@
               
               //verificando o sexo e fazendo a conta
               if(sex == "masculino"){
-              conta = atiFisica * 66 + ((13.7 * pes + ( 5 * alt) - (6.8 * id)));
+              conta =Math.trunc(atiFisica * 66 + ((13.7 * pes + ( 5 * alt) - (6.8 * id))))+"  KCAL";
               
               document.getElementById("tmb").innerHTML=conta;
             }if(sex == "feminino"){
-              conta = atiFisica * (655 + ((9.6 * pes)) + (1.8 * alt) - (4.7 * id));
+              conta = Math.trunc(atiFisica * (655 + ((9.6 * pes)) + (1.8 * alt) - (4.7 * id)))+"  KCAL";
               
               document.getElementById("tmb").innerHTML=conta;
             }
@@ -276,13 +276,13 @@
 
               //verificando o sexo e fazendo a conta
               if(sex == "masculino"){
-              conta = atiFisica * 66 + ((13.7 * pes + ( 5 * alt) - (6.8 * id)));
+              conta = Math.trunc(atiFisica * 66 + ((13.7 * pes + ( 5 * alt) - (6.8 * id))))+"  KCAL";
               
               
               document.getElementById("tmb").innerHTML=conta;
 
             }else{
-              conta = atiFisica * (655 + ((9.6 * pes)) + (1.8 * alt) - (4.7 * id));
+              conta = Math.trunc(atiFisica * (655 + ((9.6 * pes)) + (1.8 * alt) - (4.7 * id)))+"  KCAL";
               
             
               document.getElementById("tmb").innerHTML=conta;
@@ -295,13 +295,13 @@
 
               //verificando o sexo e fazendo a conta
               if(sex == "masculino"){
-              conta = atiFisica * 66 + ((13.7 * pes + ( 5 * alt) - (6.8 * id)));
+              conta = Math.trunc(atiFisica * 66 + ((13.7 * pes + ( 5 * alt) - (6.8 * id))))+"  KCAL";
               
               
               document.getElementById("tmb").innerHTML=conta;
               
             }else{
-              conta = atiFisica * (655 + ((9.6 * pes)) + (1.8 * alt) - (4.7 * id));
+              conta = Math.trunc(atiFisica * (655 + ((9.6 * pes)) + (1.8 * alt) - (4.7 * id)))+"  KCAL";
               
               
               document.getElementById("tmb").innerHTML=conta;
@@ -314,13 +314,13 @@
 
               //verificando o sexo e fazendo a conta
               if(sex == "masculino"){
-              conta = atiFisica * 66 + ((13.7 * pes + ( 5 * alt) - (6.8 * id)));
+              conta = Math.trunc(atiFisica * 66 + ((13.7 * pes + ( 5 * alt) - (6.8 * id))))+"  KCAL";
               
               
               document.getElementById("tmb").innerHTML=conta;
               
             }else{
-              conta = atiFisica * (655 + ((9.6 * pes)) + (1.8 * alt) - (4.7 * id));
+              conta =Math.trunc(atiFisica * (655 + ((9.6 * pes)) + (1.8 * alt) - (4.7 * id)))+"  KCAL";
               
               
               document.getElementById("tmb").innerHTML=conta;
@@ -333,13 +333,13 @@
 
               //verificando o sexo e fazendo a conta
               if(sex == "masculino"){
-              conta = atiFisica * 66 + ((13.7 * pes + ( 5 * alt) - (6.8 * id)));
+              conta =Math.trunc(atiFisica * 66 + ((13.7 * pes + ( 5 * alt) - (6.8 * id))))+"  KCAL";
               
               
               document.getElementById("tmb").innerHTML=conta;
               
             }else{
-              conta = atiFisica * (655 + ((9.6 * pes)) + (1.8 * alt) - (4.7 * id));
+              conta = Math.trunc(atiFisica * (655 + ((9.6 * pes)) + (1.8 * alt) - (4.7 * id)))+" KCAL";
               
               
               document.getElementById("tmb").innerHTML=conta;
@@ -349,6 +349,8 @@
         // Fecha a tela de respostas
         function fecharRespostas(){
           document.getElementById("resultado").style.top="-100%";
+
+          
         }
 
         //Função de conta
